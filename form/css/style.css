@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+/* SPページ */
+body {
+	font-size: 16px;
+}
+
+main {
+	width: 90%;
+	max-width: 500px;
+	margin: 0 auto;
+	position: relative;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px 0 30px;
+}
+
+.form {
+	border-right: 2px solid #cde2ff;
+	border-left: 2px solid #cde2ff;
+	border-bottom: 2px solid #cde2ff;
+}
+
+
+.border {
+	padding: 10px;
+}
+
+select,
+input,
+textarea {
+	border: 1px solid #dfdfdf;
+	border-radius: 3px;
+	padding: 6px;
+	width: 100%;
+	box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+.ue {
+	padding: 10px;
+	background: #f1f7ff;
+	border-top: 2px solid #cde2ff;
+	border-bottom: 2px solid #cde2ff;
+}
+
+.hissu {
+	font-size: .2em;
+	color: #fff;
+	background: #ef0653;
+	margin-right: 5px;
+	padding: 0 2px;
+	border-radius: 3px;
+}
+
+.nini {
+	font-size: .2em;
+	color: #fff;
+	background: #cccccc;
+	margin-right: 5px;
+	padding: 0 2px;
+	border-radius: 3px;
+}
+
+.yazirusi {
+	position: relative;
+}
+
+.yazirusi::after {
+	content: "";
+	width: 6px;
+	height: 6px;
+	border-bottom: 2px solid #545454;
+	border-right: 2px solid #545454;
+	transform: rotate(45deg);
+	position: absolute;
+	right: 15px;
+	top: 22px;
+}
+
+.button {
+	font-size: 1.5em;
+	color: #fff;
+	background: #ef0653;
+	width: 150px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 4px;
+	position: absolute;
+	right: 0;
+	margin-top: 15px;
+	box-shadow: 2px 2px 5px 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+a {
+	display: block;
+}
+
+
+/* PCページ */
+@media screen and (min-width: 920px) {
+	body {
+		font-size: 16px;
+	}
+
+	main {
+		max-width: 750px;
+	}
+
+	.form {
+		display: grid;
+		grid-template-columns: 40% 60%;
+		border: 1px solid #cde2ff;
+	}
+
+	select,
+	input {
+		width: 60%;
+	}
+
+	.border,
+	.ue {
+		border: 1px solid #cde2ff;
+	}
+
+	.yazirusi::after {
+		right: 185px;
+		top: 22px;
+	}
+}
+
+
+
+.sample {
+	width: 90%;
+	text-align: center;
+	margin: 100px auto 0;
+}
+
+.images {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.images img {
+	max-width: 100%;
+}
+
+/* 閉じるボタン */
+
+.close_btm {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 50px;
+	aspect-ratio: 1 / 1;
+}
+
+.close_btm::before,
+.close_btm::after {
+	content: "";
+	display: block;
+	width: 50px;
+	height: 3px;
+	background: #333;
+	transform-origin: center;
+	transform: translate(0px, 35px)rotate(45deg);
+}
+
+.close_btm::after {
+	transform: translate(0px, 33px) rotate(-45deg)
+}

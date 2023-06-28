@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ↓ここにコードを追加 */
+
+p {
+  margin: 40px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  display: block;
+  padding: 10px;
+}
+
+/* ボタン1 */
+.b1 {
+  background: #66cdaa;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 22px;
+}
+
+.b1 a {
+  border-radius: 22px;
+}
+
+.b1:hover {
+  background-color: #cc6688;
+}
+
+/* ボタン2 */
+.b2 {
+  background: #f4a460;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 5px 5px 1px 0 #000;
+}
+
+.b2:hover {
+  position: relative;
+  transform: translate(5px, 5px);
+  box-shadow: none;
+}
+
+/* ボタン3 */
+.b3 {
+  background: #1e90ff;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 22px;
+  box-shadow: -4px -5px 10px 0px rgba(6, 29, 51, 0.8) inset, 0px 10px 10px 0px rgba(204, 230, 255, 0.5)inset;
+}
+
+.b3 a {
+  border-radius: 22px;
+}
+
+.b3:hover {
+  box-shadow: 4px 5px 10px 0px rgba(6, 29, 51, 0.8) inset;
+}
+
+.b3:hover span {
+  display: inline-block;
+  transform: translate(2px, 2px);
+}
+
+/* ボタン4 */
+.b4 {
+  background: #008080;
+  width: 200px;
+  height: 45px;
+  border-radius: 22px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.b4:hover {
+  background-color: #ff8bc5;
+  transform: translate(-5px, 2px) scale(0.9);
+  transition: all 2s ease-out 50ms;
+}
+
+.b4:hover a::before,
+.b4:hover a::after {
+  content: "///";
+  color: #ff69b4;
+}
+
+/* ボタン5 */
+.b5 {
+  background: #89cc25;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  border: 4px solid #333;
+}
+
+.b5:hover {
+  animation-name: b5;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes b5 {
+  0% {
+    transform-origin: center;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform-origin: center;
+    transform: rotate(3deg);
+  }
+
+  75% {
+    transform-origin: center;
+    transform: rotate(-3deg);
+  }
+
+  100% {
+    transform-origin: center;
+    transform: rotate(0deg);
+  }
+}
+
+/* ボタン6 */
+.b6 {
+  background: #ff7d66;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 50%;
+  margin: 0 90px;
+}
+
+.b6 a {
+  padding: 40px 20px;
+  border-radius: 50%;
+}
+
+.b6:hover {
+  background-color: #ff5233;
+  transform: scale(1.2, 1.2);
+}
+
+/* ↑ここにコードを追加 */
+
+
+
+/* 閉じるボタン */
+
+.close_btm {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 75px;
+  aspect-ratio: 1 / 1;
+}
+
+.close_btm::before,
+.close_btm::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 3px;
+  background: #333;
+  transform-origin: center;
+  transform: translate(0px, 35px)rotate(45deg);
+}
+
+.close_btm::after {
+  transform: translate(0px, 33px) rotate(-45deg)
+}
